@@ -1,0 +1,30 @@
+body {
+    margin: 2rem;
+    padding: 2rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+h1{
+    font-size: 800%;
+    line-height: 135%;
+    letter-spacing: 3rem;
+    display: flex;
+    text-align: center;
+}
+
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 180%;
+    line-height: 135%;
+}
+
+
+
+
