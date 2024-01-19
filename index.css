@@ -1,7 +1,20 @@
 body {
     margin: 2rem;
-    padding: 2rem;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    padding: 1rem 0rem;
+    font-family: 'Poppins', 'Mulish', 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 200%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+section {
+    padding: 2rem 0rem;
+    /* border: 1px solid purple; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,12 +22,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 
-h1{
-    font-size: 800%;
+h1.proj-header, h2.proj-header, h3.proj-header {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+h1.main-title {
+    font-size: 600%;
+    font-family: 'Playfair Display', serif;
     line-height: 135%;
     letter-spacing: 3rem;
+    /* justify-content: center;
     display: flex;
-    text-align: center;
+    text-align: center; */
+    padding: 10rem 0rem 4rem 0rem;
 }
 
 
@@ -25,6 +46,60 @@ h2 {
     line-height: 135%;
 }
 
+a:unvisited {
+    color:rgb(29, 0, 250);
+}
+
+a:link, a:visited a:active {
+    text-decoration: none;
+    color: rgb(83, 83, 203);
+}
+
+
+a:hover {
+    color: white;
+    background-color: blueviolet;
+    text-decoration: none;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.socials-list {
+    margin: 0;
+    padding:0;
+    /* margin-left: 2rem; */
+    /* border: 1px dashed green; */
+    /* width: min-content;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.socials {
+    display: inline-block;
+    /* border: 1px solid red; */
+    padding-right: 2rem;
+    /* align-items: center; */
+}
 
 
 
+
+/* tried to use icons, hasn't worked out... yet */
+/* .social-icon {
+    display: inline-block;
+    border: 1px solid red;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.social-icon-image {
+    max-width: 5rem;
+    max-height: 5rem;
+} */

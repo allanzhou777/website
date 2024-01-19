@@ -1,89 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="felix">
-  <meta name="author" content="Felix Chen">
-  
-  <title>Allan Zhou</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="allan" />
+    <meta name="author" content="Allan Zhou" />
 
+    <title>Allan Zhou</title>
 
-  <link rel="stylesheet" type="text/css" media="all" href="index.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> 
-  <link rel="icon" type="image/png" href="favicon.png">
+    <!-- bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.allthatotherstuff"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZDCGMLXWSQ');
-  </script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/9bf3252fb8.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- js file -->
-</head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.allthatotherstuff"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZDCGMLXWSQ");
+    </script>
 
-<body>
-  <main>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <section class="center">
-      <h1 class="main-title">ALLAN ZHOU</h1>
-      <ul class="social-icon-list">
-        <li class="social-icon">LinkedIn</li>
-        <li class="social-icon">Instagram</li>
-        <li class="social-icon">Github</li>
-        <li class="social-icon">Spotify</li>
-        <li class="social-icon">Bookshelf</li>
-        <li class="social-icon">VSCO?</li>
-      </ul>
-    </section>
+  <body>
+    <main>
+      <!-- <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 justify-content-center">
+            One of three columns
+          </div>
+          <div class="col-lg-4 col-sm-12 justify-content-center">
+            One of three columns
+          </div>
+          <div class="col-lg-4 col-sm-12 justify-content-center">
+            One of three columns
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-    <p>Jump to:</p>
-    <nav class="quick-links">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12">
+            <section>
+              <h1 class="main-title">ALLAN <br />ZHOU</h1>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <ul class="socials-list">
+          <li class="socials">
+            <a href="https://www.linkedin.com/in/az777/">[linkedin]</a>
+          </li>
+          <li class="socials">
+            <a href="https://github.com/allanzhou777">[github]</a>
+          </li>
+          <li class="socials">
+            <a
+              href="https://open.spotify.com/user/fgk08h2yr6dc55n4b2ysl992d?si=b2edaf54bcc04790"
+              >[spotify]</a
+            >
+          </li>
+          <li class="socials">
+            <a href="https://vsco.co/allanzhou777/gallery">[vsco]</a>
+          </li>
+          <li class="socials">
+            <a href="https://bookshelf.website/allanzhou777">[bookshelf]</a>
+          </li>
+
+          <!-- <li class="social-icon">
+          <img src="./icons/LinkedIn.png" class="social-icon-image"/>
+          <a href="https://www.google.com/">
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="social-icon">
+          <img src="./icons/LinkedIn.png" class="social-icon-image"/>
+          <a href="https://www.google.com/">
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="social-icon">
+          <img src="./icons/LinkedIn.png" class="social-icon-image"/>
+          <a href="https://www.google.com/">
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="social-icon">
+          <img src="./icons/LinkedIn.png" class="social-icon-image"/>
+          <a href="https://www.google.com/">
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="social-icon">
+          <img src="./icons/LinkedIn.png" class="social-icon-image"/>
+          <a href="https://www.google.com/">
+            <p>LinkedIn</p>
+          </a>
+        </li> -->
+
+          <!-- <li class="social-icon"><img src="./icons/VSCO.png" class="social-icon-image"/></li>
+        <li class="social-icon"><img src="./icons/VSCO.png" class="social-icon-image"/></li>
+        <li class="social-icon"><img src="./icons/VSCO.png" class="social-icon-image"/></li>
+        <li class="social-icon"><img src="./icons/VSCO.png" class="social-icon-image"/></li>
+        <li class="social-icon"><img src="./icons/VSCO.png" class="social-icon-image"/></li> -->
+        </ul>
+        <p>or reach out at allanzhou777@utexas [dot] edu</p>
+      </section>
+
+      <!-- <section>
+      <p>Jump to:</p>
+      <nav class="quick-links">
       <ul>
         <li><a href="#Public Service">[Public Service!]</a></li>
-        <li><a href="#Music">[Music!]</a></li>
         <li><a href="#Projects">[Projects!]</a></li>
+        <li><a href="#Creative">[Creative!]</a></li>
       </ul>
+    </section> -->
 
+      <section>
+        <h2 class="proj-header" id="Research">Research</h2>
+        <p>
+          These are big boy projects, the longest of which took over a year.
+          Only made possible through really insightful and wonderful
+          teachers/mentors (and StackOverflow).
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://medium.com/@allanzhou777/leveraging-adversarial-attacks-on-resnet18-transfer-model-in-medical-dataset-classification-a96055414492"
+              >[Adversarial attacks]</a
+            >
+            : In this 12+ month project, my mentor and I worked to build a
+            robust adversarial ResNet18 transfer model in order to classify
+            medical images, namely COVID-19 radiography, breast ultrasounds, and
+            brain tumors. You can read the blog post (linked) to learn more
+            about our methods and decisions.
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1ZEVOy4A9p5S4IKHfSKgPIF-oe8YhHTPa/view?usp=sharing"
+              >[Hip Hop throughout the 2010s]</a
+            >
+            : A data science research project that taught me web scraping, how
+            to use the Spotify API, YouTube analytics, basic data analysis, and
+            how to present visualizations through matplotlib, and other
+            softwares. This project culminated in a ~5000 word research paper
+            (linked) and a 20 minute presentation.
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2211.09654"
+              >[Cyclic Base Orderings]</a
+            >
+            : A summer research project my me and two other friends focused on
+            cyclic base orderings, a specific type of spanning tree, and some of
+            their properties.
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1PSu3D_ME4bLW3LszZIRuwPMvvSI7A39D5YcB7JovaEY/edit?usp=sharing"
+              >[Archimedean solids]</a
+            >
+            : A self inquiry project for Advanced Calculus III, in which I found
+            the surface area of select Archimedean solids, such as the small
+            rhombicuboctahedron or icosidodecahedron, using my generalized
+            approach.
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h2 id="Public Service">Public Service!</h2>
-      <p>I really like organizing things and helping others. </p>
-      <p>Last summer, I co-led a summer program called AustinStrong to help kids of Austin during the pandemic. ADD PICTURES, SHOW YOUR IMPACT AND PERSONALITY</p>
-    </section>
+      Adversarial attacks, hip hop throughout the 2010s, Cyclic Base Orderings,
+      Euclidean solids
 
-    <section>
-      <h2 id="Music">Music!</h2>
-      <p>I really like making noises on hollow pieces of wood, more commonly known as a cello. Occasionally, I can make some [nice sounding noises]. But most of the time, I prefer listening to other people make nice noises, both in classical and music of other genres (many others in fact). Here are some of my favorite albums (and songs). **INSERT SONGS/ALBUMS HERE**</p>
-    </section>
+      <section>
+        <h2 class="proj-header" id="Projects">Technical Projects</h2>
+        <p>
+          Learning thru tutorials, wonderful teachers, and a lot of late nights.
+          Here is a list of some projects
+        </p>
+        <ul>
+          <!-- <li>
+            <a href="TBD">[This website]</a>: Originally build with React and
+            Javascript, now rebuilt with Tailwind and Bootstrap.
+          </li> -->
+          <li>
+            [This website]: Originally build with React and Javascript, now
+            rebuilt with Tailwind and Bootstrap.
+          </li>
+          <li>
+            <a href="https://github.com/allanzhou777/amazon-mock-website"
+              >[Amazon Mock Website]</a
+            >: My first foray into React, rebuilt scaled down version of Amazon
+            products page, cart, and tracking orders.
+          </li>
+          <li>
+            <a href="https://github.com/allanzhou777/lc-problems"
+              >[Leetcode solutions]</a
+            >: A repository containing my personal solutions to select Leetcode
+            problems.
+          </li>
+          <li>
+            <a href="https://github.com/allanzhou777/calculator">[Calculator]</a
+            >: My first foray into Javascript, a guided project implementing
+            basic features of Apple's calculator app.
+          </li>
+          <li>
+            <a href="https://github.com/allanzhou777/very-accurate-world-map"
+              >[World Map]</a
+            >: A *very* accurate world map.
+          </li>
+          <li>
+            <a href="https://github.com/allanzhou777/sirtet">[Sirtet]</a>:
+            Tetris, but upside down, with two times the tetronimos, and brighter
+            lights.
+          </li>
+          <!-- <li>
+            <a href="TBD">[Blackjack]</a>: Another guided project built using
+            React.
+          </li> -->
+          <li>[Blackjack]: Another guided project built using React.</li>
+        </ul>
 
-    <section>
-      <h2 id="Projects">Projects!</h2>
-      <p>Computers, music, research, mix it all up...</p>
-      <p>and you get a sizeable number of random projects ranging from [street performances] to [creating websites for a summer program I co-led]. Click here to view more</p>
-    </section>
-    
-    <section>
-      <p />
-      <p>Feel free to reach out and email me at allanzhou777 [at] utexas.edu or any way you can find above</p>
-      <p id="copyright"></p>
-      
-    </section>
+        <!-- personal website, amazon mock website, calculator, leetcode problem set solutions, world map, adversarial attacks, sirtet, hip hop music research paper, DSM Research paper, ultimate tic tac toe, book
+      fcc - poker simulator, tenzies,  -->
+      </section>
 
-  </main>
-  <script src="script.js"></script>
+      <section>
+        <h2 class="proj-header" id="Public Service">Community Projects</h2>
+        <p>
+          Volunteering, service, and leadership with a whole bunch or super cool
+          people.
+        </p>
+        <ul>
+          <li>
+            <a href="https://austinstrong.square.site/">[Austin Strong]</a>
+            : a summer program founded by a friend and I during the summer of
+            2020 to help children in my community with the effects of COVID.
+          </li>
+          <li>
+            <a href="https://austinchambermusic.org/people/amy-levine-tsang/"
+              >[Amy Quartet]</a
+            >
+            : A cello quartet fonded by me and 3 other cellists, eventually
+            performing for Gov. Greg Abbott at the Texas State Capitol luncheon,
+            raising $12,000+ for AAPI Communities, and in the Westlake
+            Nutcracker Finale (~15,000 attendees).
+          </li>
+          <li>
+            [ACAN Volunteering]: A part of the Austin Chinese American Network
+            volunteering service that made face shields for local hospitals in
+            need during the pandemic... over 750 face shields were made and
+            donated.
+          </li>
+        </ul>
+      </section>
 
-</body>
+      <!-- <section>
+        <h2 class="proj-header" id="Creative">Creative</h2>
+        <p>Photography, design, and other</p>
+      </section> -->
+
+      <section>
+        <p>
+          I'm always open to talking, whether about my life or anything else. Feel free to reach out and email me at <a href="mailto:allanzhou777@utexas.edu">[allanzhou777@utexas.edu]</a> or any way you can find above
+        </p>
+      </section>
+
+      <section>
+        <p id="copyright"></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
