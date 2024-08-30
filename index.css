@@ -7,6 +7,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: large;
+    max-width: 80%;
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -28,14 +29,14 @@ h1.proj-header, h2.proj-header, h3.proj-header {
 }
 
 h1.main-title {
-    font-size: 600%;
+    font-size: 500%;
     font-family: 'Playfair Display', serif;
     line-height: 135%;
     letter-spacing: 3rem;
     /* justify-content: center;
     display: flex;
     text-align: center; */
-    padding: 10rem 0rem 4rem 0rem;
+    padding: 8rem 0rem 2rem 0rem;
 }
 
 
@@ -44,6 +45,10 @@ h2 {
     font-weight: 900;
     font-size: 180%;
     line-height: 135%;
+}
+
+p {
+    padding: 1.25rem 0rem 0rem 0rem;
 }
 
 a:unvisited {
@@ -72,7 +77,7 @@ a:hover {
 
 .socials-list {
     margin: 0;
-    padding:0;
+    padding: 1rem 0rem 0rem 0rem;
     /* margin-left: 2rem; */
     /* border: 1px dashed green; */
     /* width: min-content;
@@ -88,18 +93,12 @@ a:hover {
     /* align-items: center; */
 }
 
-
-
-
-/* tried to use icons, hasn't worked out... yet */
-/* .social-icon {
+.resume {
     display: inline-block;
-    border: 1px solid red;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    padding-right: 2rem;
+    justify-content: center;
 }
 
-.social-icon-image {
-    max-width: 5rem;
-    max-height: 5rem;
-} */
+.img-scenery {
+    width: 80%;
+}
