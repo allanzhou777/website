@@ -18,10 +18,10 @@ section {
     /* border: 1px solid purple; */
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-}
+} */
 
 h1.proj-header, h2.proj-header, h3.proj-header {
     font-family: 'Playfair Display', serif;
@@ -33,6 +33,7 @@ h1.main-title {
     font-family: 'Playfair Display', serif;
     line-height: 135%;
     letter-spacing: 3rem;
+    font-weight: 900;
     /* justify-content: center;
     display: flex;
     text-align: center; */
@@ -41,8 +42,10 @@ h1.main-title {
 
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Poppins', 'Mulish', 'Roboto', Arial, Helvetica, sans-serif;
+
+    /* font-weight: 900; */
     font-size: 180%;
     line-height: 135%;
 }
@@ -50,7 +53,6 @@ h2 {
 p {
     padding: 1.25rem 0rem 0rem 0rem;
 }
-
 a:unvisited {
     color:rgb(29, 0, 250);
 }
