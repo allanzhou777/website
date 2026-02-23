@@ -1,0 +1,22 @@
+# IDE and editor
+.cursor/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Dependencies (if using Node.js in future)
+node_modules/
+*.log
+
+# Build artifacts (if using a bundler)
+dist/
+build/
+
+# Local environment
+.env
+.env.local
