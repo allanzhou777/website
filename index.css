@@ -64,11 +64,17 @@ a:link, a:visited a:active {
 
 
 a:hover {
+    color: rgb(115, 105, 215);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* link-pop: bold white-on-violet hover — add this class to any <a> to re-enable */
+/* a.link-pop:hover {
     color: white;
     background-color: blueviolet;
     text-decoration: none;
-    
-}
+} */
 
 .center {
     display: flex;
@@ -103,4 +109,23 @@ a:hover {
 
 .img-scenery {
     width: 80%;
+}
+
+.post-list {
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+.post-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 0.2rem 0;
+    line-height: 200%;
+}
+
+.post-date {
+    color: #999;
+    font-size: 0.85em;
+    min-width: 6.5rem;
+    white-space: nowrap;
 }
