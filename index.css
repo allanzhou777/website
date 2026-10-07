@@ -53,28 +53,36 @@ h2 {
 p {
     padding: 1.25rem 0rem 0rem 0rem;
 }
-a:unvisited {
-    color:rgb(29, 0, 250);
-}
-
-a:link, a:visited a:active {
+a {
     text-decoration: none;
     color: rgb(83, 83, 203);
+    transition: color 140ms ease, background-color 140ms ease;
 }
 
+a::before {
+    content: '[';
+}
+
+a::after {
+    content: ']';
+}
 
 a:hover {
-    color: rgb(115, 105, 215);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-/* link-pop: bold white-on-violet hover — add this class to any <a> to re-enable */
-/* a.link-pop:hover {
     color: white;
     background-color: blueviolet;
     text-decoration: none;
-} */
+}
+
+.site-crumbs {
+    align-items: center;
+    display: flex;
+    gap: 0.55rem;
+}
+
+.site-crumbs p {
+    margin: 0;
+    padding: 0;
+}
 
 .center {
     display: flex;
@@ -116,16 +124,34 @@ a:hover {
 }
 
 .post-entry {
-    display: flex;
-    align-items: baseline;
-    gap: 2rem;
-    padding: 0.2rem 0;
+    padding: 0.5rem 0;
     line-height: 200%;
 }
 
-.post-date {
+.post-entry h4 {
+    margin: 0;
+}
+
+.post-meta {
     color: #999;
     font-size: 0.85em;
-    min-width: 6.5rem;
-    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.post-visual {
+    margin: 2rem 0;
+}
+
+.post-visual img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.post-visual figcaption {
+    color: #777;
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin-top: 0.6rem;
 }

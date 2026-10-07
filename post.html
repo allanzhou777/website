@@ -63,8 +63,11 @@
 
   <body>
     <main>
-      <section>
-        <a href="index.html">← back</a>
+      <section class="site-crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Allan Zhou</a>
+        <span aria-hidden="true">←</span>
+        <a href="writing.html">Writing</a>
+        <span aria-hidden="true">←</span>
       </section>
 
       <section id="post-content">
@@ -74,13 +77,13 @@
       <section>
         <ul class="socials-list">
           <li class="socials">
-            <a href="https://www.linkedin.com/in/az777/" target="_blank">[linkedin]</a>
+            <a href="https://www.linkedin.com/in/az777/" target="_blank">linkedin</a>
           </li>
           <li class="socials">
-            <a href="https://github.com/allanzhou777" target="_blank">[github]</a>
+            <a href="https://github.com/allanzhou777" target="_blank">github</a>
           </li>
           <li class="socials">
-            <a href="mailto:allanzhou777@gmail.com" target="_blank">[email]</a>
+            <a href="mailto:allanzhou777@gmail.com" target="_blank">email</a>
           </li>
         </ul>
       </section>
@@ -95,7 +98,7 @@
           content.innerHTML = '<p>No post specified.</p>';
           return;
         }
-        fetch('posts/' + postName + '.md')
+        fetch('posts/' + encodeURIComponent(postName) + '.md', { cache: 'no-store' })
           .then(function (r) {
             if (!r.ok) throw new Error('not found');
             return r.text();
