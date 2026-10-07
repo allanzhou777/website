@@ -1,35 +1,32 @@
-# How Adversarial Attacks Work
+# When the Image Looks the Same but the Model Changes Its Mind
 
 *May 2026*
 
-Neural networks are remarkably good at classifying images. They're also remarkably easy to fool.
+An adversarial attack changes an image to make a classifier wrong while keeping the change small enough that a person may not notice it. The key word is **optimized**: this is not ordinary random noise. The attacker uses the model's gradients to find the particular pixel changes that increase its loss.
+<!--
+<figure class="post-visual">
+  <img src="images/adversarial-perturbation.png" alt="Illustration of a subtle structured image perturbation changing a model's decision path while leaving the image visually similar.">
+  <figcaption>The perturbation is chosen to move the model across a decision boundary, not to make the image look different.</figcaption>
+</figure> -->
 
-An **adversarial example** is an input that has been slightly modified — often imperceptibly to a human — so that a neural network misclassifies it with high confidence. The modification isn't random noise; it's carefully computed to exploit the model's decision boundary.
+## How the attack works
 
----
-
-## The Basic Idea
-
-Suppose you have an image of a panda. Normally you compute the gradient of the loss with respect to the model's *weights* during training. In an adversarial attack, you instead compute the gradient with respect to the *input pixels*, then take a small step in the direction that increases the loss. The image barely changes visually, but the model now sees something entirely different.
-
-This is the **Fast Gradient Sign Method (FGSM)**, introduced by Goodfellow et al. in 2014:
+For a classifier *f*, image *x*, and correct label *y*, an attacker differentiates the loss with respect to **the pixels** rather than the model weights. FGSM takes one step in the loss-increasing direction:
 
 ```
 x_adv = x + ε · sign(∇_x L(f(x), y))
 ```
 
-ε controls the perturbation magnitude. Small ε keeps the attack subtle; larger ε starts to look like visible noise.
+The size and shape of the allowed change matter. An **L∞** bound limits the largest change to any pixel; an **L2** bound limits total perturbation energy. Multi-step attacks such as projected gradient descent are stronger because they repeatedly optimize the perturbation while staying inside that allowed region.
 
-## Why Does This Happen?
+## How a model learns to resist it
 
-Neural networks learn high-dimensional, highly non-linear decision boundaries. Tiny, structured perturbations can cross those boundaries. Unlike humans — who rely on shape, context, and semantics — networks latch onto texture and pixel statistics, making them brittle in ways that don't match our intuitions.
+Adversarial training puts those optimized examples into training. Instead of only learning “classify the original image,” the model learns “classify the hardest nearby image correctly too.” This usually improves resistance within the attack budget it was trained against, but it can cost clean-image accuracy and does not prove safety against every attack.
 
-## Stronger Attacks
+## What we tested
 
-FGSM is a one-step attack. **Projected Gradient Descent (PGD)** iterates: take many small FGSM steps, projecting back into an ε-ball around the original image after each step. This finds much stronger adversarial examples because it explores the local loss landscape more thoroughly.
+In [our original project](https://medium.com/@allanzhou777/leveraging-adversarial-attacks-on-resnet18-transfer-model-in-medical-dataset-classification-a96055414492), we fine-tuned every layer of ResNet-18 on COVID-19 radiographs, breast ultrasounds, and brain-tumor scans. We compared ordinary ImageNet initialization with initialization pre-trained for robustness, then evaluated L2, L∞, unconstrained, and random-smooth attacks.
 
-## Defenses
+The result was not “robust is always better.” The robust initialization was most consistently stronger on the brain-tumor task; breast-ultrasound results depended on the attack; COVID-radiography results were more mixed. That is the useful lesson: robustness is an empirical property of a model, data distribution, threat model, and attack budget—not a label a model earns once.
 
-The most effective defense is **adversarial training**: include adversarial examples in your training data so the model learns to classify them correctly. The tradeoff is a slight drop in accuracy on clean inputs — but it's the most robust approach we have.
-
-I spent over a year on a project building a robust adversarial ResNet18 transfer model for classifying medical images — COVID-19 radiography, breast ultrasounds, and brain tumors. The core challenge was that adversarial robustness in the medical domain matters more than in most settings: a fooled classifier isn't just wrong, it's potentially dangerous.
+The work is promising, but the datasets and model were limited. It is evidence for a direction, not a clinical claim.

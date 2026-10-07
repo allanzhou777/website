@@ -1,31 +1,24 @@
-# How A/B Tests Work
+# A/B Tests Answer One Question
 
-*May 2026*
+*May 2025*
 
-A/B testing is one of the most useful tools in a data-driven company's toolkit. The idea is simple: you want to know whether change X improves metric Y. Split your users into two groups — a **control** group (A) that sees the old experience, and a **treatment** group (B) that sees the new one — and measure.
+Did this change cause a better outcome?
 
----
+An A/B test answers that question by randomly showing the old experience to one group and the new experience to another. If the groups are large enough, randomization makes them comparable. The difference in their outcomes is then evidence about the change—not just a correlation.
 
-## The Setup
+<figure class="post-visual">
+  <img src="images/ab-test-randomization.png" alt="Illustration of users being randomly split into two groups that see different page variants before their outcomes are compared.">
+  <figcaption>Random assignment is the mechanism that makes the comparison meaningful.</figcaption>
+</figure>
 
-The key ingredient is **randomization**. Users are randomly assigned to A or B, which (assuming a large enough sample) ensures the groups are comparable on everything except the treatment. Without randomization, you can't isolate cause and effect.
+## The discipline
 
-Once the experiment runs for a fixed window, you compare the metric of interest across groups. Common metrics: click-through rate, conversion, session length, revenue per user.
+Before the test starts, decide three things:
 
-## When Does a Result Count?
+1. **The metric:** what outcome matters—activation, conversion, retention, or something else?
+2. **The decision threshold:** what improvement would be meaningful enough to act on?
+3. **The sample size:** how many observations are needed to distinguish that improvement from noise?
 
-You're looking for **statistical significance** — evidence that the observed difference isn't just noise. The standard threshold is p < 0.05, meaning a less than 5% chance of seeing a gap this large if there were truly no effect. But p-values alone don't tell the whole story: a tiny, statistically significant lift might not be worth shipping.
+Statistical significance is not the whole decision. A tiny effect can be statistically convincing and still not be worth the engineering or product cost. Conversely, a promising but uncertain effect may justify a larger follow-up experiment.
 
-A more useful framing is **minimum detectable effect (MDE)**: before running the test, decide the smallest lift that would actually matter, then size your experiment so you have enough power to detect it.
-
-## Practical Complications
-
-A few things that make A/B testing hard in practice:
-
-- **Novelty effects** — users behave differently just because something is new, not because it's better.
-- **Network effects** — in social or sharing features, one user's assignment can affect another's experience, violating the independence assumption.
-- **Multiple comparisons** — if you track many metrics or run many experiments simultaneously, false positives accumulate fast.
-
----
-
-*Some content in this post draws from work I did during my internship at Dropbox. I'm in the process of getting approval to share those specifics — I'll update this post once I do.*
+The important habit is simple: choose the question and decision rule before seeing the result. That keeps experimentation from turning into a search for a favorable number.
