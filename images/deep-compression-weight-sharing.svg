@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title description">
+  <title id="title">Weight sharing after pruning</title>
+  <desc id="description">Surviving weights are clustered into a 32-value codebook and replaced by five-bit indices. Pruned zero weights remain a separate sparse mask.</desc>
+  <style>
+    .ink { fill:#1d2733; font-family:Arial, sans-serif; }
+    .muted { fill:#6c7782; font-family:Arial, sans-serif; }
+    .small { font-size:18px; } .label { font-size:22px; font-weight:700; }
+    .tiny { font-size:15px; } .axis { stroke:#1d2733; stroke-width:2; }
+    .line { stroke:#7297af; stroke-width:2; } .centroid { stroke:#c65120; stroke-width:3; }
+  </style>
+  <rect width="1200" height="560" rx="18" fill="#fbfaf7"/>
+  <text x="65" y="62" class="ink label">1. Keep only surviving weights</text>
+  <line x1="72" y1="390" x2="408" y2="390" class="axis"/>
+  <path d="M85 390 C130 388,155 370,180 330 C205 285,230 172,254 165 C280 172,306 285,330 330 C355 370,380 388,400 390" fill="none" stroke="#2a5872" stroke-width="4"/>
+  <path d="M242 390 L242 115 L265 390" fill="#aeb7bf" opacity=".8"/>
+  <text x="211" y="435" class="muted small">pruned zero weights</text>
+  <path d="M213 410 L246 385" class="line"/>
+  <g class="centroid">
+    <line x1="158" y1="390" x2="158" y2="367"/><circle cx="158" cy="363" r="5" fill="#c65120"/>
+    <line x1="195" y1="390" x2="195" y2="294"/><circle cx="195" cy="290" r="5" fill="#c65120"/>
+    <line x1="218" y1="390" x2="218" y2="224"/><circle cx="218" cy="220" r="5" fill="#c65120"/>
+    <line x1="236" y1="390" x2="236" y2="180"/><circle cx="236" cy="176" r="5" fill="#c65120"/>
+    <line x1="254" y1="390" x2="254" y2="162"/><circle cx="254" cy="158" r="5" fill="#c65120"/>
+    <line x1="272" y1="390" x2="272" y2="180"/><circle cx="272" cy="176" r="5" fill="#c65120"/>
+    <line x1="290" y1="390" x2="290" y2="224"/><circle cx="290" cy="220" r="5" fill="#c65120"/>
+    <line x1="313" y1="390" x2="313" y2="294"/><circle cx="313" cy="290" r="5" fill="#c65120"/>
+    <line x1="350" y1="390" x2="350" y2="367"/><circle cx="350" cy="363" r="5" fill="#c65120"/>
+  </g>
+  <text x="105" y="475" class="muted small">centroids become denser where surviving values are common</text>
+
+  <line x1="435" y1="270" x2="495" y2="270" stroke="#1d2733" stroke-width="3"/>
+  <polygon points="495,270 480,260 480,280" fill="#1d2733"/>
+  <text x="515" y="62" class="ink label">2. Replace values with indices</text>
+  <rect x="515" y="120" width="240" height="210" rx="10" fill="#e5eff4" stroke="#7297af" stroke-width="2"/>
+  <g class="ink small" text-anchor="middle">
+    <text x="555" y="166">−0.18</text><text x="615" y="166">0.02</text><text x="675" y="166">0.31</text><text x="735" y="166">−0.07</text>
+    <text x="555" y="226">0.02</text><text x="615" y="226">−0.18</text><text x="675" y="226">0.09</text><text x="735" y="226">0.31</text>
+    <text x="555" y="286">−0.07</text><text x="615" y="286">0.02</text><text x="675" y="286">−0.18</text><text x="735" y="286">0.09</text>
+  </g>
+  <line x1="775" y1="225" x2="830" y2="225" stroke="#1d2733" stroke-width="3"/>
+  <polygon points="830,225 815,215 815,235" fill="#1d2733"/>
+  <rect x="850" y="120" width="155" height="210" rx="10" fill="#fff0df" stroke="#c98045" stroke-width="2"/>
+  <g class="ink small" text-anchor="middle">
+    <text x="880" y="166">03</text><text x="925" y="166">16</text><text x="970" y="166">27</text>
+    <text x="880" y="226">16</text><text x="925" y="226">03</text><text x="970" y="226">21</text>
+    <text x="880" y="286">27</text><text x="925" y="286">16</text><text x="970" y="286">03</text>
+  </g>
+  <text x="885" y="370" class="muted small">5-bit indices</text>
+
+  <line x1="1025" y1="270" x2="1070" y2="270" stroke="#1d2733" stroke-width="3"/>
+  <polygon points="1070,270 1055,260 1055,280" fill="#1d2733"/>
+  <text x="1025" y="62" class="ink label">3. Store a small codebook</text>
+  <rect x="1070" y="108" width="95" height="250" rx="10" fill="#f6eee8" stroke="#c98045" stroke-width="2"/>
+  <g class="ink small" text-anchor="middle">
+    <text x="1118" y="151">00  −0.31</text><text x="1118" y="191">03  −0.18</text><text x="1118" y="231">16   0.02</text><text x="1118" y="271">21   0.09</text><text x="1118" y="311">27   0.31</text>
+  </g>
+  <text x="1068" y="407" class="muted small">32 learned values</text>
+  <text x="1094" y="437" class="muted small">= 5 bits</text>
+</svg>
