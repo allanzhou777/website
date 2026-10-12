@@ -149,6 +149,21 @@ a:hover {
     max-width: 100%;
 }
 
+.post-visual--wide img {
+    width: min(100%, 60vw);
+}
+
+.post-visual--narrow img {
+    width: min(100%, 40vw);
+}
+
+@media (max-width: 700px) {
+    .post-visual--wide img,
+    .post-visual--narrow img {
+        width: 100%;
+    }
+}
+
 .post-visual figcaption {
     color: #777;
     font-size: 0.85em;

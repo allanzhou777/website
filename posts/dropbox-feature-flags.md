@@ -8,7 +8,7 @@ At the most basic level, feature flags sound like booleans: turn a feature on or
 
 Take a theoretical flag named `ff_logo_top_left_premium`. It might choose a logo using country, language, plan tier, and accessibility settings. A different flag might decide whether to show an AI-search control in Dash, based on AI eligibility and subscription state. Each flag needs its own set of attributes. Those attributes can come from different services, caches, or databases, and they do not all return at the same speed.
 
-<figure class="post-visual">
+<figure class="post-visual post-visual--wide">
   <img src="images/feature-flag attributes.png" alt="Diagram of one page request fanning out to several attribute sources, which feed multiple independent feature-flag evaluations that complete at different times.">
   <figcaption>Different flags need different attributes. A slow lookup should only hold up the flag that actually needs it.</figcaption>
 </figure>
@@ -25,7 +25,7 @@ My second project was a script to reduce PII (Personally identifiable informatio
 
 That shortcut is more common than it should be. The config file was public, unencrypted, and a raw email in a rule is still sensitive even if other identifiers are hashed. I wrote the cleanup around that problem: find the bad patterns, encrypt or replace or remove the PII, and get people to update the flags they owned. It became a SEV-2 because Dropbox of course is a storage company, and this sort of stuff is taken quite seriously.
 
-<figure class="post-visual">
+<figure class="post-visual post-visual--narrow">
   <img src="images/18 acks.png" alt="A cropped response showing 18 acknowledgements on a separate incident thread.">
   <figcaption>18 Acks after I create the slack channel for the sev</figcaption>
 </figure>

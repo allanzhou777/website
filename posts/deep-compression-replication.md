@@ -20,7 +20,7 @@ These are distinct techniques, not three names for quantization. Pruning removes
 
 The paper's [Figure 1](https://arxiv.org/html/1510.00149v5#S1.F1) shows this three-stage pipeline. I did not copy the figure here; the diagram below is my own explanation of the second step, based on the paper's [weight-sharing figure](https://arxiv.org/html/1510.00149v5#S1.F3).
 
-<figure class="post-visual">
+<figure class="post-visual post-visual--wide">
   <img src="images/deep-compression-weight-sharing.svg" alt="After pruning, surviving weights are clustered into representative centroids, then replaced by five-bit codebook indices. Pruned zeros stay separate from the nonzero codebook.">
   <figcaption>Weight sharing in this replication. A 5-bit index addresses one of 32 learned centroid values. The centroid locations follow the distribution of the surviving nonzero weights; pruning does not imply that there are categorically fewer centroids near zero.</figcaption>
 </figure>
